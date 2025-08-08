@@ -62,7 +62,27 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Option 1: Lovable Hosting
 Simply open [Lovable](https://lovable.dev/projects/c7d835e8-86cc-482e-87af-eb18c03acfd4) and click on Share -> Publish.
+
+### Option 2: GitHub Pages (Configured)
+This project is configured for GitHub Pages deployment:
+
+1. **Push to main branch** - The GitHub Action will automatically build and deploy
+2. **Enable GitHub Pages** in repository Settings → Pages:
+   - Source: "Deploy from a branch"
+   - Branch: "gh-pages"
+   - Folder: "/ (root)"
+3. **Access your site** at: `https://[your-username].github.io/farmfresh-lamb-template/`
+
+For detailed setup instructions, see [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md).
+
+### Option 3: Other Hosting Platforms
+You can also deploy to Vercel, Netlify, or any static hosting service:
+```bash
+npm run build
+# Upload the 'dist' folder to your hosting provider
+```
 
 ## Can I connect a custom domain to my Lovable project?
 

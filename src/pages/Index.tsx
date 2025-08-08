@@ -14,8 +14,8 @@ const Index = () => {
     url: "https://yourfarm.com/",
     description: "Pasture-raised lamb from our family farm to your plate.",
     image: [
-      new URL(lambDishes, window.location.origin).toString(),
-      new URL(farmers, window.location.origin).toString()
+      new URL(lambDishes, window.location.origin + import.meta.env.BASE_URL).toString(),
+      new URL(farmers, window.location.origin + import.meta.env.BASE_URL).toString()
     ],
     address: {
       "@type": "PostalAddress",
@@ -40,7 +40,7 @@ const Index = () => {
       <Seo
         title="Pasture-Raised Lamb | Your Farm Name"
         description="From our fields to your family table — premium, pasture-raised lamb you can trust."
-        canonical={window.location.origin + import.meta.env.BASE_URL}
+        canonical={window.location.origin + import.meta.env.BASE_URL.replace(/\/$/, '')}
         jsonLd={structuredData}
       />
       <Navbar />

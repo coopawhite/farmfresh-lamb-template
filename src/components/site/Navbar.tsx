@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.svg";
 
 const links = [
   { href: "#lamb", label: "Our Lamb" },
@@ -14,8 +15,12 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b">
       <nav className="container mx-auto flex items-center justify-between py-4">
-        <a href="#home" className="flex items-center gap-2 font-heading text-xl">
-          <span aria-label="Your Farm Name" className="select-none">Your Farm Name</span>
+        <a href="#home" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Your Farm Name"
+            className="h-12 w-auto select-none"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-6">
